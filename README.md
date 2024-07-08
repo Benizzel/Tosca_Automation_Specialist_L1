@@ -440,8 +440,39 @@ Auf Hierarchy achten!!
 
 ![alt text](/assets/image-47.png)
 
+# Additional Topics
+## Constraint
+
+-> Ist ein ActionMode wie Buffer, Verify...
+
+Wird in Tabellen benutzt, um eine bestimmte Row oder Column zu wählen
+
+Nützlich wenn: 
+- ich die Reihenfolge von Elementen in einer Tabelle nicht kenne
+
+Mit Constraint kann ich dann sagen: Gib mir das Element, wo in "Columnname-X" BLA drin hat und in Columnname-Y BLUB 
+
+![alt text](/assets/constraint.png)
+
+## Fireevent
+- Irgendwas mit JavaScript habe ich noch aufgeschnappt. Sind aber innerhalb 20 Sekunden durch das Thema und die Übung funktioniert nicht :-)
+
+## Multiuser Environment
+- Wenn mit mehreren User: Module etc müssen ausgechecked werden, bevor ich sie bearbeiten kann.
+- Die anderen User sehen dann einen roten Balken und wissen: aha - ausgechecked
+- Ausgecheckede Module kann ich trotzdem in einen Testcase ziehen.
+
+- DB ist irgendwo auf einem Server - auf meinem Compi ist eine gesamte lokale Kopie. -> Performance ist ein Problem...
+
+- um zu Arbeiten, muss ich ein- und auschecken
 
 
+## TestCase Design
+
+- TestDesign Specialist Kurs
+- Testsheet mit Attributen
+- TestSheet -> Völlig frei von Modulen. Ich kann einfach Designen, frei Attribute definieren, Instanzen machen etc.
+- Testcase nehmen und dann "Convert to Template" -> Dann ist es eine Vorlage und ich kann die Werte aus dem Testsheet als Platzhalter ins "Value" reinnahmen. Aus dem Testcase Template kann ich dann gem. TestSheet Testcases instanzieren.
 
 
 
