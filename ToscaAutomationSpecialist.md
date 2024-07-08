@@ -154,7 +154,7 @@ Module: Feingranulare Sammlung von Controlls, welche ich ansteuern kann. Im Test
 Bei Values: "X" bedeutet, dass Tosca versucht technisch zu klicken. Während "Click" "den Mauszeiger bewegt" --> Besser: X, weil dann unabhängig von Browser und Screen Resolution und so
 
 ControlGroup - Bei den Values cool, weil dann habe ich die Group und kann als DropDown den Value wählen
-![alt text](assets/image-1.png)
+![alt text](/assets/image-1.png)
 
 ## Random Values, MATH, DATE
 - {RND[5]}
@@ -173,7 +173,7 @@ Format `{DATE[<Basedate>][<Offset>][<Format>]}`
 
 Wenn ich mit { bei Value beginne, bekomme ich eine Auswahl der Methoden
 
-![alt text](assets/image-2.png)
+![alt text](/assets/image-2.png)
 
 ## Recap
 
@@ -200,29 +200,29 @@ Es gibt ein Modul "TBox Delete Buffer"
 
 Bei reinen div Tags, die Controls sind (z.B. wenn ein Preis angezeigt wird): Ich muss bei Value das Property definieren, von welchem der Wert genommen werden soll. Zum Beispiel OuterText oder InnerText. Tosca macht daraus dann .OuterText was soviel bedeutet wie Price.OuterText - also vom Control Price das Property OuterText
 
-![alt text](assets/image-3.png) 
-![alt text](assets/image-4.png)
+![alt text](/assets/image-3.png) 
+![alt text](/assets/image-4.png)
 
 ## Verify mit Table
 
 
-![alt text](assets/image-5.png)
+![alt text](/assets/image-5.png)
 
-![alt text](assets/image-6.png)
+![alt text](/assets/image-6.png)
 
 
 Meine Lieblingsvariante, um Sub-Total etc. zu prüfen -> Ich gehe von Row zu Row
 
-![alt text](assets/image-8.png)
+![alt text](/assets/image-8.png)
 
 Ich könnte aber auch Column selektieren und dann prüfen
 
-![alt text](assets/image-7.png)
+![alt text](/assets/image-7.png)
 
 
 Weil "Message Order successful" ein Div Tag ist, welches einfach einen Text anzeigt, check ich mit dem Property "Visible", ob das Element vorhanden ist:
 
-![alt text](assets/image-9.png)
+![alt text](/assets/image-9.png)
 
 ---
 
@@ -248,11 +248,11 @@ Ich kann Workflows in Libraries auslagern und sie dann in 0..n Testcases nutzen.
 - Zielmodul bleibt
 - Source Modul verschwindet
 
-![alt text](assets/image-10.png)
+![alt text](/assets/image-10.png)
 
 ## Value Range
 Auf Modul bei einem Control
-![alt text](assets/image-11.png)
+![alt text](/assets/image-11.png)
 
 ## Wait
 Action Mode "WaitOn" -> Tosca wartet, bis Element da ist. WaitOn hat ein Timeout in den Tosca Settings definiert. Den Timeout kann ich aber auch in den Testcase Settings (dort, wo ich den Browser definiere) übersteuern.
@@ -260,21 +260,21 @@ Action Mode "WaitOn" -> Tosca wartet, bis Element da ist. WaitOn hat ein Timeout
 ## TCP - Test Configuration Parameter
 Define on Testcase
 
-![alt text](assets/image-12.png)
+![alt text](/assets/image-12.png)
 
 mit `{CP[<TCP>]}` kann ich auf ihn referenzieren
 
-![alt text](assets/image-13.png)
+![alt text](/assets/image-13.png)
 
-![alt text](assets/image-14.png)
+![alt text](/assets/image-14.png)
 
 ## Business Parameters
 
 Define in the Library. Value ist leer, weil ich definiere dann beim Testcase die Parameter, mit welchen ich den Testcase ausführen möchte.
-![alt text](assets/image-15.png)
+![alt text](/assets/image-15.png)
 
 Im TestCase selber sehe ich die Schritte nicht mehr. Aber ich kann die Parameter für die Ausführung definieren
-![alt text](assets/image-16.png)
+![alt text](/assets/image-16.png)
 
 ## XBuffer
 Damit kann ich Zeugs aus Elementen buffern, die dynamisch sind. Z B bei "Order Number: 123456" ist die 123456 immer unterschiedlich, je nach Order. 
@@ -283,18 +283,18 @@ Spannend beim zuweisen: ActionMode = Verify!! Und dann das Property (in diesem F
 
 XBuffer definiert den dynamischen Teil eines Strings und speichert diesen dynamischen Teil auch gleich noch in einem Buffer (in meinem Fall im "OrderNumber")
 
-![alt text](assets/image-18.png)
+![alt text](/assets/image-18.png)
 
-![alt text](assets/image-19.png)
+![alt text](/assets/image-19.png)
 
 ## Parent ID, Dynamic ID, Dynamic Comparison
 Um auf der Order Übersicht meinen letzten Order auszuwählen:
 - Orderübersicht gescannt. Irgend ein Div mit einem Order genommen und dann aber die Properties dynamisch gemacht:
 - Beim DIV vom Order: OuterText --> Hier ändern auf "Order Number: " und danach den XBuffer. So sucht Tosca dann den Order mit der Order Number, die ich gebuffert habe. Also den letzten
-![alt text](assets/image-21.png)
+![alt text](/assets/image-21.png)
 
 - Beim OrderTotal InnerText. <mark>ACHTUNG: Auch wenn InnerText leer ausschaut: auf die drei Punkte klicken, meist steht irgendwas drin</mark> - Dynamisch machen, indem Order Total:* -> also Wildcard, eingegeben wird
-![alt text](assets/image-20.png)
+![alt text](/assets/image-20.png)
 
 ## ExplicitName + Index
 
@@ -305,13 +305,13 @@ Um auf der Order Übersicht meinen letzten Order auszuwählen:
 Muss ich auf dem Control manuell hinzufügen. Tosca unterstützt mich nicht mit DropDown o.ä., obwohl Configs vordefiniert: https://documentation.tricentis.com/tosca/2320/en/content/tosca_commander/xmodules_properties.htm?Highlight=Properties%20for%20XModules
 
 
-![alt text](assets/image-22.png)
+![alt text](/assets/image-22.png)
 
 ## Resolve Reference
 
 Wenn ich von Library einen Folder reinziehe, sind die verknüpft. D.h. Wenn ich einen Step lösche, ist es überall gelöscht. Wenn ich für einen Testcase zwar die Steps aus der Library wiederverwenden möchte, aber für diesen einen Testfall einen Step rauslöschen, kann ich die Referenz auflösen:
 
-![alt text](assets/image-23.png)
+![alt text](/assets/image-23.png)
 
 
 ## ResultCount
@@ -320,30 +320,30 @@ Wenn ich von Library einen Folder reinziehe, sind die verknüpft. D.h. Wenn ich 
 
 2 ist Modul von mir (Order Overview). Ich bin auf der Orderübersicht und nutze ResultCount, damit Tosca bei der Auführung des Testcases zählt, wie oft das Control (hier das DIV OrderInfo) auf der Page vorkommt. Die Anzahl wird in den Buffer NumberOfOrder gespeichert
 
-![alt text](assets/image-24.png)
+![alt text](/assets/image-24.png)
 
 Dann füge ich einen Teststep-Folder hinzu und definiere in den Properties, wie oft der Teststep durchgeführt werden soll ("Repetition"). Ich setzt den Wert auf den Buffer(Achtung: Mit geschweiften Klammern und so) NumberOfOrders.
 
-![alt text](assets/image-26.png)
+![alt text](/assets/image-26.png)
 
 ## Repetition
 
 - CountUp läuft so oft durch, wie ich NumberOfOrder (wegen Property "Repetition", dass ich auf TestStep Folder gesetzt habe).
 - Dank #{Repetition} <- ExplicitName, weiss Tosca, dass es jetzt gem. Property "Repetition" durchläuft, also gem. NumberOfOrder und jedes Element in der Liste angeschaut werden soll.
 - OrderTotal wird gebuffert und im Sum up dem Buffer SUM hinzugefügt. String vorne ist fix, hinten Order Number ist dynamisch. Darum XBuffer `Order Total: {XB[OrderTotal]}` -> der dynamische (rosarote) Teil wird in XBuffer gespeichert.
-    ![alt text](assets/image-27.png)
+    ![alt text](/assets/image-27.png)
 - OrderTotal -> `.InnerText==Order Total: {XB[OrderTotal]}`
 - SUM -> `{MATH[{B[SUM]} + {B[OrderTotal]}]}`
 
-![alt text](assets/image-25.png)
+![alt text](/assets/image-25.png)
 
 Nachdem ich den Testcase ausgeführt habe, schaut es dann so aus:
 
-![alt text](assets/image-28.png)
+![alt text](/assets/image-28.png)
 
 Values im Buffer - Looks good 👍
 
-![alt text](assets/image-29.png)
+![alt text](/assets/image-29.png)
 
 # Requirements
 
