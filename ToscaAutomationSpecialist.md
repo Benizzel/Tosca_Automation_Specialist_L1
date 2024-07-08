@@ -53,6 +53,8 @@ Testcases und deren Ausführung planen und zuteilen
 
 "Debug Mode" Ich bin im blauen Teil "TestCases" am Testcases entwickeln. Kann Teile davon ausführen. Mit ScratchBook sehe ich die Resultate instantly (ohne dass ich Executen muss)
 
+Ctrl + B öffnet das Scratch Book. Mit Drag and Drop von Testcases oder Steps kann ich Sachen reinziehen, die dann ausgeführt werden.
+
 *Import + Export Subset*
 
 Testfälle von Workspace x exportieren und in Workspace y importieren. Weil alles zusammenhängt (Testcase-Module-....) kriege ich ziemlich viel raus
@@ -346,6 +348,52 @@ Values im Buffer - Looks good 👍
 ![alt text](/assets/image-29.png)
 
 # Requirements
+
+- Anforderungen erfassen und gewichten
+- Requirement Folder, Requirement Set, Requirement
+- Frequency class -> Gewichtung, wie oft etwas benutzt wird (je höher, desto mehr)
+- Damage class -> Auswirkung/Schaden, wenn Funktion nicht funktioniert (je höher, desto schlimmer)
+- Weight 2^Frequency * 2^Damage = Weight
+- Ich kann dann den Requirements die Testfälle zuweisen
+- In der Coverage sehe ich dann, wieviel % der Requirements abgedeckt sind
+- <mark> Achtung bei den Zahlen: Wenn es fachlich eigentlich zwei Testcases bräuchte, ich haber nur einen am Requirement habe, sagt Tosca "100% Abdeckung" obwohl es fachlich nur 50% sind.
+
+
+> Bemerkung von mir selber: Ist eigentlich wie eine Nutzwertanalyse.
+
+> Requirements --> Use Cases auf unterschiedlicher Flughöhe¨
+
+-> Auf Requirement gehen und mit Ctrl + T Testcase suchen und hinzufügen (oder per Drag and Drop von Testcase Folder)
+-> Nachdem Testcases hinzugefügt wurden, Rechtsklick auf Requirement Folder und "Update Values"
+
+![alt text](/assets/image-30.png)
+
+
+# ExecutionList
+
+ExecutionList -> Execution Entry --> Element representing a linked Testcase. Können in Execution Entry Folders strukturiert werden.
+
+ExecutionList kann mit Requirements und Testcases oder einzelnen Testcase-Folder zusammengestellt werden. So bin ich sehr flexibel, wie ich die Execution Lists organisiere.
+
+Im Gegensatz zum Scratch-Book, werden bei den ExecutionList die Logs gespeichert
+
+1 Testfall kann nur 1 mal in Execution List sein. Aber ich kann beim Testcase in der Execution List das Property "Repetition" auf 'n' setzen.
+
+<mark> Do not forget to define Test configuration auf der ExecutionList. Das überschreibt die Konfiguration auf den Testcases.
+
+---
+EXKURS - TQL - Tosca Query Language
+
+![alt text](/assets/image-33.png)
+---
+
+Execution List mit Testcases erstellt und zu Requirements hinzugefügt. Ich muss es zu den Requirements hinzufügen, damit die Testcases dort als "Passed" markiert werden, wenn sie in der verlinkten ExecutionList "Passed" sind.
+
+![alt text](/assets/image-31.png)
+
+![alt text](/assets/image-32.png)
+
+
 
 
 
