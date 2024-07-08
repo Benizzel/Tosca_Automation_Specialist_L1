@@ -102,7 +102,7 @@ Tosca sagen, wie es das item erkennt
 
 Identify by Properties: WICHTIG: Properties, die ich dafür auswähle müssen gleich bleiben!
 
-![Identify by](assets/image.png)
+![Identify by](/assets/image.png)
 
 Controls können umbenannt werden
 
