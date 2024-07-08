@@ -393,6 +393,53 @@ Execution List mit Testcases erstellt und zu Requirements hinzugefügt. Ich muss
 
 ![alt text](/assets/image-32.png)
 
+# Loops and Conditions
+
+- WHILE - Before run condition is checked 
+- DO - After run condition is checked
+- IF
+
+Es wird immer eine Condition geprüft
+
+> Man sollte möglichst wenig Loops und Conditions benutzen. Wir machen keine Prozess-Automation, sondern Testcases! Evtl. macht es bei Recovery Szenarien sinn.
+
+"Condition": Bedeutung - Wenn Teststeps in Condition = passed, dann wird "Then" ausgeführt, sonst nichts oder "Else"
+
+EXKURS: Achtung bei Tables - Row + Column: #1 = 1. Reihe mit Header gilt als Reihe. $1 - 1. Reihe ohne Header
+
+Der folgende Loop guckt, ob im Warenkorb die Produkttabelle vorhanden ist. Wenn ja, wird von jedem Eintrag in der Tabelle die Remove-Checkbox auf True gesetzt und mit click auf Update Shopping Cart wird der Eintrag gelöscht (diesen Loop durchläuft Tosca, solange es Produkte im Warenkorb hat, bzw. solange "TableExists==True")
+
+![alt text](/assets/image-40.png)
+
+![alt text](/assets/image-41.png)
+
+# Recovery Scenarios & CleanUp
+
+Recovery Scenarios are used to enable Tosca to react to certain common errors, e.g. an unexpected pop-up that appears randomly, on any page in your application, at any time during test execution.
+
+Recovery Scenario kann ich auf Höhe Testcase, Testfolder, Teststep, whatever, definieren
+Wenn ich sowohl auf dem Testcase wie auch auf dem Testfolder ein Recovery Scenario habe, fängt er "unten" an, und wenn das nicht funktioniert, geht Tosca ein Level höher.
+
+![alt text](/assets/image-42.png)
+
+Settings richtig setzen!
+![alt text](/assets/image-43.png)
+
+Beispiel:
+In folgendem Testcase, wenn Testcase nicht funktioniert, wendet Tosca Recovery Scenario an (löscht alles aus dem Warenkorb) und beginnt den Testcase nochmals von vorne.
+
+![alt text](/assets/image-44.png)
+
+CleanUp Scenario -> Läuft, wenn alle Recoveries Scenarios versagt haben und Testfall nicht weiterläuft.
+
+Auf Hierarchy achten!!
+
+![alt text](/assets/image-45.png)
+
+![alt text](/assets/image-44.png)
+
+![alt text](/assets/image-47.png)
+
 
 
 
