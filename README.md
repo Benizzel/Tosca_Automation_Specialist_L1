@@ -126,7 +126,11 @@ Ich kann bei den Name zur Identifizierung etc. auch Wildcards benutzen
 
 ----
 
-<mark>!!!!!!!!!!!!!!!INSERT HERE: Folie Best Practices</mark>
+# Best Practices
+
+![alt text](/assets/bp_1.png)
+![alt text](/assets/bp_2.png)
+![alt text](/assets/bp_3.png)
 
 ----
 
